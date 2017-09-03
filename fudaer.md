@@ -64,3 +64,36 @@ Auth : Not Required.
   "message": "ok"
 }
 ```
+
+## Reset Password
+
+### 重新設定密碼
+
+```
+POST /fudaer/reset_password
+```
+
+Auth : Required ( reset password token)
+
+
+### Input
+
+| Key | Type | Description |
+| --- | --- | --- |
+| `new_password` | string | 使用者新密碼 |
+
+### Sample input
+
+```json
+{
+  "new_password": "1234asdf"
+}
+```
+
+### Response
+
+```json
+{
+  "message": "ok"
+}
+```
