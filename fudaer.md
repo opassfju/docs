@@ -9,6 +9,8 @@
 
 ## Confirm Verification
 
+### 確認認證信件
+
 ```
 GET /fudaers/:id/confirm_verification/:token
 ```
@@ -16,6 +18,46 @@ GET /fudaers/:id/confirm_verification/:token
 Auth : Not Required.
 
 ### Response
+
+```json
+{
+  "message": "ok"
+}
+```
+
+## Request Confirm Verification
+
+### 重新請求認證信件
+
+```
+GET /fudaers/:id/request_verification
+```
+
+Auth : Not Required.
+
+### Response
+
+寄送認證信件至使用者信箱並回傳以下訊息
+
+```json
+{
+  "message": "ok"
+}
+```
+
+## Request Reset Password
+
+### 請求忘記/重設 密碼
+
+```
+GET /fudaers/:id/request_reset_password
+```
+
+Auth : Not Required.
+
+### Response
+
+寄送認證信件至使用者信箱並回傳以下訊息
 
 ```json
 {

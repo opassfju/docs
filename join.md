@@ -26,6 +26,8 @@ Auth : Not Required.
 
 ### Response
 
+寄送認證信件至使用者信箱並回傳以下訊息
+
 ```json
 {
   "message": "ok"
