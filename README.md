@@ -1,1 +1,24 @@
-docs
+# OPASS Documentation
+
+## OPASS API Documentation
+
+### 註冊
+
+- 註冊 | [/join](./join)
+
+### 身份認證
+
+- 重新請求認證信件 | [/fudaers/request_verification](./fudaer#request_verification)
+- 確認認證信件 | [/fudaers/:id/confirm_verification/:token](./fudaer#confirm_verification)
+
+
+
+### 登入
+
+- 使用者登入 | [/login](./login)
+
+### 使用者管理
+
+- 使用者基本資訊相關 | [/fudaer](./fudaer)
+- 重新設定新密碼/忘記密碼 | [/fudaer/request_reset_password](./fudaer#request_reset_password)
+
