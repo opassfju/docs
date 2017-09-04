@@ -5,7 +5,7 @@
 - 請求忘記/重設 密碼 | [Request Reset Password](#request-reset-password)
 - 重設密碼 | [Reset Password](#reset-password)
 - 取得使用者資訊 | [Get User Info](#get-user-info)
-- 更新使用者資訊 | [Patch User Info](#patch-user-info)
+- 更新使用者資訊 | [Update User Info](#update-user-info)
 
 ## Confirm Verification
 
@@ -95,5 +95,77 @@ Auth : Required ( reset password token)
 ```json
 {
   "message": "ok"
+}
+```
+
+## Get User Info
+
+### 使用者資訊
+
+```
+GET /fudaer
+```
+
+Auth : Required ( login token)
+
+### Response Sample
+
+```json
+{
+  "email": "404111111@mail.fju.edu.tw",
+  "department": "企業管理學系",
+  "nickname": "新鮮小大一",
+  "section": "日間部",
+  "sec_major": "哲學系",
+  "miner": "金融與國際企業學系",
+  "program": "動態資訊視覺設計學分學程"
+}
+```
+
+## Update User Info
+
+### 更新使用者資訊
+
+```
+PATCH /fudaer
+```
+
+Auth : Required ( login token)
+
+### Input
+
+| Key | Type | Description |
+| --- | --- | --- |
+| `department` | string | 主修系所 |
+| `section` | string | 部別 |
+| `sec_major` | string | 第二主修系所 |
+| `miner` | string | 副修 |
+| `program` | string | 學程 |
+
+### Sample input
+
+```json
+{
+  "department": "0E",
+  "section": "D",
+  "sec_major": "03",
+  "miner": "0F",
+  "program": "K40"
+}
+```
+
+### Response Sample
+
+回傳更新之後的結果
+
+```json
+{
+  "email": "404111111@mail.fju.edu.tw",
+  "department": "企業管理學系",
+  "nickname": "新鮮小大一",
+  "section": "日間部",
+  "sec_major": "哲學系",
+  "miner": "金融與國際企業學系",
+  "program": "動態資訊視覺設計學分學程"
 }
 ```
