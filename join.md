@@ -17,7 +17,7 @@ Auth : Not Required.
 
 ### Sample input
 
-```json
+```javascript
 {
   "email": "404111111@mail.fju.edu.tw",
   "password": "1234asdf"
@@ -28,7 +28,7 @@ Auth : Not Required.
 
 寄送認證信件至使用者信箱並回傳以下訊息
 
-```json
+```javascript
 {
   "message": "ok"
 }
